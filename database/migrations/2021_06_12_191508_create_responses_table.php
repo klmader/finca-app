@@ -16,7 +16,7 @@ class CreateResponsesTable extends Migration
         Schema::create('responses', function (Blueprint $table) {
             $table->id();
             $table->text('response');
-            $table->foreignId('app_id')->constrained('applications');
+            $table->foreignId('application_id')->constrained();
             $table->foreignId('question_id')->constrained();
             $table->timestamps();
         });
